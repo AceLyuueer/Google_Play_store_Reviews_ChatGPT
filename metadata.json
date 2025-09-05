@@ -1,0 +1,13 @@
+{
+    "reviewId": "<class 'str'>",
+    "userName": "<class 'str'>",
+    "userImage": "<class 'str'>",
+    "content": "<class 'str'>",
+    "score": "<class 'int'>",
+    "thumbsUpCount": "<class 'int'>",
+    "reviewCreatedVersion": "<class 'str'>",
+    "at": "<class 'datetime.datetime'>",
+    "replyContent": "<class 'NoneType'>",
+    "repliedAt": "<class 'NoneType'>",
+    "appVersion": "<class 'str'>"
+}
