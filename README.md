@@ -37,7 +37,7 @@ Most replyContent and repliedAt values are null.
 ### Score distribution
 Discover the score distribution for top relevant reviews
 
-![g1](score_distribution.png)
+![g1](score_distribution.png?v=2025-09-10)
 
 Here is the box plot for score distribution. Mean score: 2.76, Median score: 3.0. STD: 1.56, 27% of reviews have 1 star, while 22% have 5 star.
 
