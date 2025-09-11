@@ -46,14 +46,14 @@ Distribution is bimodal, with a heavy cluster at 1 star and 5 star.
 ### Time data
 Show reviews counts and average scores over time.
 
-![g2](time_data.png)
+![g2](time_data.png?v=2025-09-10)
 
 Review counts peaked in August 2025. Average score dropped from 4.1 in Jan 2025 to 3.2 by Feb 2025
 
 ### Scores grouped data
 Show average thumbs up by scores and total count of scores
 
-![g3](score_thumbs_up_count.png)
+![g3](score_thumbs_up_count.png?v=2025-09-10)
 
 5 score reviews gain much more thumbs up by other users than other scores.
 1 score reviews have largest data amount(27%) but least amount of thumbs up count.
