@@ -66,3 +66,29 @@ High user engament, contains reviews with lots of thumbs-up.
 ### Con:
 Heavy skew toward very recent months due to “most relevant” sort. This may underrepresent older feedback.
 5 star reviews attract disproportionately high “thumbs up,” suggesting agreement bias in positive reviews.
+
+## Product-centric Analysis
+### Pain Point Analysis on Low-Star Reviews
+#### Method
+- Filtered reviews with ratings < 3 stars.
+- Applied text cleaning (lowercasing, punctuation removal, stopword removal).
+- Counted word/bigram frequencies to extract common complaint phrases.
+
+#### Findings
+![g4](complaints_words.png)
+
+#### Insight
+Operation time, image generation and some availability issues are mainly reported.
+
+### Version-Based Trends
+#### Method
+- Computed average star rating per version.
+- Tracked frequency of complaint phrases across versions.
+- Targeting versions with review count > 50.
+
+#### Findings
+![g5](version_score.png)
+- v1.2025.205 -> v1.2025.210: Average score drops from 3.7 to 3.2.
+- v1.2025.210 -> v1.2025.245: Average score increases continuously to 4.4.
+
+![g6](complaints_trend.png)
