@@ -83,7 +83,7 @@ Operation time, image generation and some availability issues are mainly reporte
 ### Version-Based Trends
 #### Method
 - Computed average star rating per version.
-- Tracked frequency of complaint phrases across versions.
+- Tracked frequency of complaint phrases across versions on reviews with rating < 3 stars.
 - Targeting versions with review count > 50.
 
 #### Findings
@@ -92,3 +92,25 @@ Operation time, image generation and some availability issues are mainly reporte
 - v1.2025.210 -> v1.2025.245: Average score increases continuously to 4.4.
 
 ![g6](complaints_trend.png)
+- complaints about doesn't work increases in version v1.2025.203.
+- wasting time and please fix complaints increase in later versions.
+
+#### Insight
+Operating time and doesn't work issues are complaints more on version with lower average score.
+
+### Feature-Specific Insights
+#### Method
+- Defined feature categories in: login, subscription, image gen, voice mode and performance
+- Tagged reviews mentioning these features via keyword matching
+- Compared average rating and percentage of low-star reviews per feature.
+
+#### Findings
+
+|              |     Login |   Subscription |   Image Generation |   Voice Mode |   Performance |
+|:-------------|----------:|---------------:|-------------------:|-------------:|--------------:|
+| mentions     | 178       |     3378       |         3060       |   1848       |    1534       |
+| avg_score    |   2.09551 |        2.98757 |            3.10065 |      3.46374 |       3.71382 |
+| low_star_pct |  72.4719  |       43.0136  |           38.1699  |     30.1407  |      24.6415  |
+
+#### Insight
+Login and Subscription are major sentiment issues.
