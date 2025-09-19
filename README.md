@@ -96,7 +96,7 @@ Operation time, image generation and some availability issues are mainly reporte
 - wasting time and please fix complaints increase in later versions.
 
 #### Insight
-Operating time and doesn't work issues are complaints more on version with lower average score.
+The drop in v1.2025.210 is strongly associated with an increase in “operation time” and “doesn’t work” complaints, indicating stability and reliability issues
 
 ### Feature-Specific Insights
 #### Method
@@ -113,4 +113,5 @@ Operating time and doesn't work issues are complaints more on version with lower
 | low_star_pct |  72.4719  |       43.0136  |           38.1699  |     30.1407  |      24.6415  |
 
 #### Insight
-Login and Subscription are major sentiment issues.
+- Login issues are the most severe pain point with greatest low_star_pct.
+- subscription is the most frequently mentioned complaint with low average ratings.
