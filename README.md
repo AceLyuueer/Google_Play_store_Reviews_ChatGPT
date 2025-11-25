@@ -1,6 +1,5 @@
-# Google_Play_store_Reviews_ChatGPT
-Data Ingestion and early analysis of ChatGPT reviews sample data from Google Play store.
-
+# Google-play-rating-sentiment-analysis
+A data-driven analysis of Google Play review sentiment and its statistical correlation with temporal rating fluctuations
 This is a dataset of reviews for ChatGPT in Google play store.
 
 ## Metadata
