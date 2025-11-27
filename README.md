@@ -1,6 +1,129 @@
-# Google-play-rating-sentiment-analysis
-A data-driven analysis of Google Play review sentiment and its statistical correlation with temporal rating fluctuations
-This is a dataset of reviews for ChatGPT in Google play store.
+# Google Play Rating–Sentiment Analysis  
+A research project that performs **3-class sentiment analysis** on Google Play reviews and uses **visual and statistical correlation** to understand how user sentiment trends relate to rating changes over time.
+
+---
+
+## 📑 Table of Contents
+- [Overview](#overview)
+- [Research Goals](#research-goals)
+- [Problem Statement](#problem-statement)
+- [Methodology](#methodology)
+  - [Data Collection](#data-collection)
+  - [Sentiment Classification (3-Class Model)](#sentiment-classification-3-class-model)
+  - [Aggregation](#aggregation)
+  - [Visualization](#visualization)
+  - [Statistical Correlation](#statistical-correlation)
+- [Repository Structure](#repository-structure)
+- [How to Run](#how-to-run)
+- [Results](#results)
+- [Limitations](#limitations)
+- [Future Work](#future-work)
+- [License](#license)
+
+---
+
+## 🧭 Overview
+This project investigates how **user sentiment** in Google Play reviews correlates with **rating trends** over time.  
+By classifying each review into **positive**, **neutral**, or **negative**, and comparing aggregated sentiment with rating history, the project aims to reveal:
+
+- what drives rating increases or drops  
+- emotional reactions to app updates  
+- early warning signs of negative sentiment  
+- divergence between ratings and user mood  
+- long-term sentiment trends  
+
+This repository contains scripts and notebooks for data collection, sentiment modeling, visualization, and statistical correlation analysis.
+
+---
+
+## 🎯 Research Goals
+This project aims to answer:
+
+- How does overall sentiment (positive/neutral/negative) change over time?  
+- Do changes in sentiment correlate with rating changes?  
+- Does negative sentiment precede rating drops?  
+- Do positive sentiment spikes follow successful updates?  
+- Are there periods where sentiment and ratings diverge significantly?  
+
+---
+
+## ❗ Problem Statement
+Google Play shows rating history but **does not explain why ratings change**.
+
+The major challenges:
+
+- Rating numbers offer no insight into *user emotions*.  
+- Review text is long, noisy, and impossible to read manually at scale.  
+- Google Play does not provide sentiment data.  
+- It's difficult to link rating drops to specific user frustrations.  
+- No existing dashboard combines sentiment and rating timelines.  
+
+This research fills that gap by extracting quantifiable sentiment from reviews and correlating it with rating trends.
+
+---
+
+## 🔬 Methodology
+
+### 📥 Data Collection
+
+Google Play Store does not provide a public API for full historical review archives, and the reviews returned are influenced by Google's internal relevance ranking. To maximize coverage, this project collects reviews using multiple sorting modes (`NEWEST`, `MOST_RELEVANT`, and `RATING`) and iteratively follows continuation tokens until no more data is available.
+
+This approach retrieves the **maximum set of reviews currently exposed by the Google Play API**, but older reviews may not be fully available due to platform limitations. As a result, the dataset represents the reviews that are *currently visible* rather than the complete historical archive.
+
+Each review includes:
+- Text content  
+- Star rating (1–5)  
+- Review timestamp  
+- App version (if available)  
+- Review ID  
+
+---
+
+### 😀 Sentiment Classification (3-Class Model)
+Each review is labeled as:
+
+- **Positive**  
+- **Neutral**  
+- **Negative**
+
+Sentiment is extracted using an LLM (e.g., ChatGPT), ensuring consistency and scalability.
+
+---
+
+### 📊 Aggregation
+- Group reviews by day/week/month  
+- Calculate counts and proportions of each sentiment  
+- Align sentiment timeline with rating timeline  
+
+---
+
+### 📈 Visualization
+This project includes:
+
+- Sentiment-over-time line charts  
+- Rating trend charts  
+- Overlay charts combining both  
+- Highlighted periods of divergence  
+
+These visuals help reveal hidden patterns and emotional responses to updates or issues.
+
+---
+
+### 📉 Statistical Correlation
+Methods include:
+
+- **Pearson correlation**  
+- **Spearman rank correlation**  
+- **Lagged correlation** (sentiment leading/following rating changes)  
+- **Correlation heatmaps**
+
+This quantifies how strongly sentiment and rating trends move together.
+
+---
+
+## 📁 Repository Structure
+
+
 
 ## Metadata
 Contains 1000 Descriptive data for reviews, gained by using google_play_scraper most_relevant sort.
